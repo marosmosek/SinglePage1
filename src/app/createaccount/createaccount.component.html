@@ -1,0 +1,115 @@
+<div class="Page">
+    <div class="Component">
+      <div class="Navbar">
+          <a routerLink="/register" class="Item Active">
+            <div class="Text">
+                Create account
+            </div>
+          </a>
+          <a routerLink="/login" class="Item">
+            <div class="Text">
+                Log In
+            </div>
+          </a>
+      </div>
+      <div class="ComponentContent" style="width:80%">
+        <form >
+
+          <div class="form-group input-group mt-3">
+            <div class="MyInputBox" [ngClass]="{'ErrBox':UserName.touched && !UserName.valid}">
+              <div style="display:flex;flex-direction:row">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <img src="../../assets/username.svg" alt="">
+                    </span>
+                </div>
+                <div class="field">
+                  <input required ngModel name="UserName" #UserName="ngModel"  id="UserName" type="text" class="form-control" placeholder="Your username">
+                  <label for="UserName">Your username</label>
+                </div>
+              </div>  
+              <div class="alert alert-danger" *ngIf="UserName.touched && !UserName.valid" >Username is required</div>
+            </div>
+          </div>
+
+          <div class="form-group input-group mt-3">
+            <div class="MyInputBox" [ngClass]="{'Myshadow':Email.change,'ErrBox':Email.touched && !Email.valid}">
+              <div style="display:flex;flex-direction:row">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <img src="../../assets/email.svg" alt="">
+                    </span>
+                </div>
+                <div class="field">
+                  <input required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" ngModel name="Email" #Email="ngModel"  id="Email" type="text" class="form-control" placeholder="Your email adress">
+                  <label for="Email">Your email</label>
+                </div>
+              </div>  
+              <div class="alert alert-danger" *ngIf="Email.touched && !Email.valid" >
+                  <div *ngIf="Email.errors.required">Email is required! </div>
+                  <div *ngIf="Email.errors.pattern">Please input a valid email! </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group input-group mt-3">
+            <div class="MyInputBox" [ngClass]="{'ErrBox':Password.touched && !Password.valid}">
+              <div style="display:flex;flex-direction:row;overflow: hidden;">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <img src="../../assets/password.svg" alt="">
+                    </span>
+                </div>
+                  <div class="field">
+                      <input appPassword required ngModel name="Password" #Password="ngModel" (keyup)="PassStrength(Password)"  id="Password" type="password" class="form-control"  placeholder="New password">
+                      <label for="Password">New password</label>
+                  </div>
+                  
+              </div>  
+              <div class="alert alert-danger" *ngIf="Password.touched && !Password.valid">
+                  <div *ngIf="Password.errors.required">Password is required! </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group input-group" *ngIf="Password.dirty">
+            <div class="ProgresBar">
+              <div class="progress">
+                <div class="progress-bar" [ngClass]="{'weak':Weak,'good':Good,'excelent':Excelent}" role="progressbar" style="width: 50%" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="ProgresText" [ngClass]="{'weak':Weak,'good':Good,'excelent':Excelent}">
+                {{status}}
+              </div>
+            </div>
+          </div>
+
+          <button [disabled]="!UserName.valid || !Email.valid || !Password.valid" class="mybtn btn btn-primary" (click)="onSubmit()">
+            <div class="btnText">Create account</div>
+          </button> 
+
+          
+        </form>
+
+        <div class="BreakerWrapper">
+          <div class="BreakerLineBox"></div>
+          <div class="BreakerWord"> OR </div>
+          <div class="BreakerLineBox"></div>
+        </div>
+
+        <button type="button" class="mybtnSocial btn btn-light mt-4">
+          <span class="input-group-text" style="background:transparent; border:none" >
+            <img src="../../assets/FB-icon.svg" alt="">
+          </span>
+          <div class="btnSocialText">Register with Facebook</div>
+        </button>
+        <button type="button" class="mybtnSocial btn btn-light">
+          <span class="input-group-text" style="background:transparent; border:none">
+            <img src="../../assets/G-icon.svg" alt=""/>
+          </span>
+          <div class="btnSocialText">Register with Gmail</div>
+        </button>
+      </div>
+    </div>
+    <div class="TermsBox">
+        By signing up you agree to our <a href="#"> Terms of Service </a> and <a href="#"> Privacy Policy </a>
+    </div>
+  </div>

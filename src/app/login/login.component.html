@@ -1,0 +1,94 @@
+<div class="Page">
+    <div class="Component">
+      <div class="Navbar">
+          <a routerLink="/register" class="Item">
+            <div class="Text">
+                Create account
+            </div>
+          </a>
+          <a routerLink="/login" class="Item Active">
+            <div class="Text">
+                Log In
+            </div>
+          </a>
+      </div>
+      <div class="ComponentContent" style="width:80%">
+        <form>
+
+          <div class="form-group input-group mt-3">
+            <div class="MyInputBox" [ngClass]="{'ErrBox':UserName.touched && !UserName.valid}">
+              <div style="display:flex;flex-direction:row">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <img src="../../assets/username.svg" alt="">
+                    </span>
+                </div>
+                <div class="field">
+                  <input required ngModel name="UserName" #UserName="ngModel"  id="UserName" type="text" class="form-control" placeholder="Your username or email">
+                  <label for="UserName">Your username or email</label>
+                </div>
+              </div>  
+              <div class="alert alert-danger" *ngIf="UserName.touched && !UserName.valid" >Username or email is required</div>
+            </div>
+          </div>
+
+          <div class="form-group input-group mt-3">
+            <div class="MyInputBox" [ngClass]="{'ErrBox':Password.touched && !Password.valid}">
+              <div style="display:flex;flex-direction:row;overflow: hidden;">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <img src="../../assets/password.svg" alt="">
+                    </span>
+                </div>
+                  <div class="field">
+                      <input appPassword required ngModel name="Password" #Password="ngModel"  id="Password" type="password" class="form-control"  placeholder="Your password">
+                      <label for="Password">Your password</label>
+                  </div>
+                  
+              </div>  
+              <div class="alert alert-danger" *ngIf="Password.touched && !Password.valid" >
+                  <div *ngIf="Password.errors.required">Password is required! </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="Check1">
+            <label class="MyCheckboxLabel form-check-label" for="Check1" style="padding-top: 0!important;">
+              Remember password
+            </label>
+            <div >
+              <a href="#" style="text-decoration:none;color: #2AB446;width: 33%;">Forgot password?</a>
+            </div>
+          </div>
+
+          <button [disabled]="!UserName.valid || !Password.valid || loading" class="mybtn btn btn-primary">
+            <div class="btnText">Log in</div>
+          </button> 
+
+          
+        </form>
+
+        <div class="BreakerWrapper">
+          <div class="BreakerLineBox"></div>
+          <div class="BreakerWord"> OR CONNECT WITH </div>
+          <div class="BreakerLineBox"></div>
+        </div>
+
+        <button type="button" class="mybtnSocial btn btn-light mt-4">
+          <span class="input-group-text" style="background:transparent; border:none" >
+            <img src="../../assets/FB-icon.svg" alt="">
+          </span>
+          <div class="btnSocialText">Register with Facebook</div>
+        </button>
+        <button type="button" class="mybtnSocial btn btn-light">
+          <span class="input-group-text" style="background:transparent; border:none">
+            <img src="../../assets/G-icon.svg" alt=""/>
+          </span>
+          <div class="btnSocialText">Register with Gmail</div>
+        </button>
+      </div>
+    </div>
+    <div class="TermsBox">
+        By signing up you agree to our <a href="#"> Terms of Service </a> and <a href="#"> Privacy Policy </a>
+    </div>
+  </div>

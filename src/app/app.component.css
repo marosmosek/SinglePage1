@@ -1,0 +1,77 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 0px rgba(36, 51, 39, 0.02), 0px 1px 5px rgba(36, 51, 39, 0.13); 
+    height: 60px;
+    z-index: 2;
+}
+ header .Left{
+    display: flex;
+    position: fixed; 
+    left: 0;
+}
+
+header .Left a{
+    text-decoration: none;
+}
+
+header .Left .NavbarLabel{
+    width: 100%;
+    display: flex;
+    padding-left: .7rem;
+}
+
+header .Left .BtnText{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #243327;
+    padding-left: .7rem;
+    -webkit-transition: opacity 0.4s ease-in-out;
+    -moz-transition: opactiy 0.4s ease-in-out;
+    -ms-transition: opacity 0.4s ease-in-out;
+    -o-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+}
+
+header .Center{
+    cursor: default;
+    font-family: 'Work Sans';
+    font-style: Bold;
+    font-weight: 1000;
+    font-size: 20px;
+    line-height: 100%;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #243327;
+} 
+section{
+    margin-top: 65px;
+}
+
+@media only screen and (max-width: 600px) {
+    header .Left .BtnText{
+        -webkit-transition: opacity 0.2s ease-in-out;
+        -moz-transition: opactiy 0.2s ease-in-out;
+        -ms-transition: opacity 0.2s ease-in-out;
+        -o-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        zoom: 1;
+        filter: alpha(opacity=0);
+        opacity: 0;
+    }
+  }

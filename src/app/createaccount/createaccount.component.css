@@ -1,0 +1,462 @@
+.Page{
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    flex-direction: column;
+    padding: 7.22% 0;
+}
+
+.Page .Component{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.0726902);
+    border-radius: 6px;
+    padding-bottom: 30px; 
+}
+
+.Page .Component .Navbar{
+    width: 100%;
+    height: 70px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.Page .Component .Navbar a {
+    text-decoration: none
+}
+
+.Page .Component .Navbar .Item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #F1F3F2;
+    box-shadow: inset 3px -5px 4px rgba(0, 0, 0, 0.05);
+    color: #939F95;
+    cursor: hand;
+}
+.Page .Component .Navbar .Item:first-child{
+    border-top: 4px solid #E7E9E7;
+    border-top-left-radius: 4px;
+}
+.Page .Component .Navbar .Item:last-child{
+    border-top: 4px solid #E7E9E7;
+    border-top-right-radius: 4px;
+}
+.Page .Component .Navbar .Item .Text{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+.Page .Component .Navbar .Item.Active {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #FFFFFF; 
+    border-top: 4px solid #2AB446;
+    color: #243327;
+    box-shadow: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.TermsBox{
+    margin-top: 1.2rem
+}
+.TermsBox > a{
+    color: #2AB446;
+}
+
+.alert{
+    margin-bottom:0px;
+    padding: 0 1rem;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.alert-danger{
+    background: #FF463A;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 28px;
+    display: flex;
+    align-items: flex-end;
+    color: #FFFFFF; 
+    border: 1px solid red;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.ErrBox {
+    border: 1px solid red!important;
+    border-radius: 3px!important;
+}
+
+.form-control:focus{
+    border: none;
+    box-shadow: none
+}
+.input-group-text{
+    background: #FFFFFF;
+    border: none;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.MyInputBox{
+    display:flex;
+    flex-direction:column;
+    width: 100%;
+    border: 1px solid #939F95;
+    border-radius: 3px;
+}
+.field {
+    z-index: 0;
+    display: flex;
+    flex-flow: column-reverse;
+    width: 100%;
+    height: 3.2rem;
+    padding-bottom: .3rem;
+  }
+  
+  label, input {
+    width: 99%;
+    transition: all 0.2s;
+    touch-action: manipulation;
+  }
+  
+  input {
+    font-size: 1em;
+    border: 0;
+    font-family: inherit;
+    -webkit-appearance: none;
+    border-radius: 0;
+    padding: 0;
+    cursor: text;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 28px;
+    display: flex;
+    align-items: flex-end;
+    color: #243327;
+  }
+  input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus,textarea:-webkit-autofill,textarea:-webkit-autofill:hover,textarea:-webkit-autofill:focus,select:-webkit-autofill,select:-webkit-autofill:hover,select:-webkit-autofill:focus {
+    border: none;
+    background: #FFFFFF;
+    -webkit-text-fill-color: #495057;
+    -webkit-box-shadow: 0 0 0px 1000px #FFFFFF inset;
+  }
+  
+  input:focus {
+    outline: 0;
+    border-bottom: 1px solid #666;
+  }
+  
+  label {
+    font-size: .8em;
+    margin-bottom: 0;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 28px;
+    display: flex;
+    align-items: flex-end;
+    color: #939F95;
+  }
+  
+  input:placeholder-shown + label {
+    cursor: text;
+    max-width: 66.66%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 1.7rem) scale(1.3);
+  }
+  
+  ::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+  }
+  
+  input:focus::-webkit-input-placeholder {
+    opacity: 1;
+  }
+  
+  input:not(:placeholder-shown) + label,
+  input:focus + label {
+    transform: translate(0, 0) scale(1);
+    cursor: default;
+    padding-top: 1.1rem!important;
+  }
+
+.mybtn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2AB446;
+    border-radius: 2px;
+    box-shadow: 0px 1px 0px #2F9343;
+}
+.btn-primary{
+    border-color: #2AB446;
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle{
+    color: white;
+    background-color: rgb(40, 145, 61);
+    border-color: rgb(40, 145, 61);
+}
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus{
+    box-shadow: 0 0 0 0.2rem rgb(40, 145, 61,.5);
+}
+.mybtn .btnText{
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 28px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+
+}
+
+.BreakerWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3vh;
+}
+
+.BreakerWrapper .BreakerLineBox {
+    width: 10.2vw;
+    height: 2px;
+    background: #E7E9E7;
+}
+
+.BreakerWrapper .BreakerWord {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    letter-spacing: 1px;
+
+    color: #939F95;
+
+}
+.btn{
+    padding: 0.8rem .75rem;
+}
+.mybtnSocial{
+    margin: 1.5rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #F6F8F7;
+    border: 1px solid #E9ECE9;
+    border-radius: 2px;
+    padding-left: 0;
+}
+
+.mybtnSocial .btnSocialText{
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 28px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #243327;
+    padding-left: 1rem
+}
+
+.Myshadow{
+    -webkit-box-shadow: 0px 0px 8px -3px rgba(153,153,153,1);
+    -moz-box-shadow: 0px 0px 8px -3px rgba(153,153,153,1);
+    box-shadow: 0px 0px 8px -3px rgba(153,153,153,1);
+    transition: box-shadow 0.1s ease-in-out;
+  }
+
+.ProgresBar{
+    width:100%;
+    height: 2.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center      
+}
+.ProgresBar .progress{
+    width:78%!important;
+    height: .5rem;
+}
+.ProgresBar .progress-bar.weak{
+    background-color: #FFC122;
+}
+.ProgresBar .progress-bar.good{
+    background-color: #2AB446;
+}
+.ProgresBar .progress-bar.excelent{
+    background-color: #229138;
+}
+
+.ProgresBar .ProgresText{
+    width:22%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.ProgresBar .ProgresText.weak{
+    color: #FFC122;
+}
+.ProgresBar .ProgresText.good{
+    color: #2AB446;
+}
+.ProgresBar .ProgresText.excelent{
+    color: #229138;
+}
+
+  @media only screen and (max-width:500px) {
+    .Page .Component{
+        width: 90%;
+    }
+    .Page .Component .Navbar{
+        height: 50px!important;
+    }
+    .Page .Component .Navbar .Item .Text{
+        font-size: 14px!important;
+        white-space: nowrap;
+    }
+    .ComponentContent{
+        width: 90%!important;
+    }
+    .field{
+        height: 2.8rem;
+    }
+    input{
+        font-size: 12px!important;
+    }
+    label{
+        font-size: 10px!important;
+    }
+    .PassBtnText{
+        width: 60px!important;
+    }
+    .btn{
+        padding: 0.4rem 0.75rem!important;
+    }
+    .mybtn{
+        margin: 0.5rem 0!important;
+    }
+    .mybtn .btnText{
+        font-size: 14px!important;
+        white-space: nowrap;
+        padding-left: 0px!important;
+    }
+    .mybtnSocial{
+        margin: 0.5rem 0!important;
+    }
+    .mybtnSocial .btnSocialText{
+        font-size: 12px!important;
+        white-space: nowrap;
+        padding-left: 0px!important;
+    }
+    .BreakerWrapper .BreakerLineBox{
+        width: 35vw!important;
+    }
+    .TermsBox{
+        width: 88%;
+        font-size: 12px;
+        text-align: justify;
+    }
+    .alert-danger{
+        font-size: 10px;
+    }
+  }
+
+  @media only screen and (min-width: 501px) and (max-width:900px) {
+    .Page .Component{
+        width: 60%;
+    }
+    .Page .Component .Navbar{
+        height: 60px!important;
+    }
+    .Page .Component .Navbar .Item .Text{
+        font-size: 14px!important;
+        white-space: nowrap;
+    }
+    .ComponentContent{
+        width: 90%!important;
+    }
+    .field{
+        height: 2.8rem;
+    }
+    input{
+        font-size: 12px!important;
+    }
+    label{
+        font-size: 10px!important;
+    }
+    .PassBtnText{
+        width: 60px!important;
+    }
+    .btn{
+        padding: 0.4rem 0.75rem!important;
+    }
+    .mybtn{
+        margin: 0.5rem 0!important;
+    }
+    .mybtn .btnText{
+        font-size: 14px!important;
+        white-space: nowrap;
+        padding-left: 0px!important;
+    }
+    .mybtnSocial{
+        margin: 0.5rem 0!important;
+    }
+    .mybtnSocial .btnSocialText{
+        font-size: 12px!important;
+        white-space: nowrap;
+        padding-left: 0px!important;
+    }
+    .BreakerWrapper .BreakerLineBox{
+        width: 35vw!important;
+    }
+    .TermsBox{
+        width: 58%;
+        font-size: 12px;
+        text-align: justify;
+    }
+    .alert-danger{
+        font-size: 10px;
+    }
+  }
